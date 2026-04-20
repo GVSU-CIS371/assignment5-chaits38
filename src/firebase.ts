@@ -1,17 +1,21 @@
-import { getFirestore } from "firebase/firestore";
+// Import Firebase functions
 import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
 
+// Your Firebase config
 const firebaseConfig = {
-  //   // COPY this from your Firebase Console
-  //   apiKey: "your-api-key-goes-here",
-  //   authDomain: "your-project-name-here.firebaseapp.com",
-  //   databaseURL: "https://your-project-name-here.firebaseio.com",
-  //   projectId: "your-project-name-here",
-  //   storageBucket: "your-project-name.appspot.com",
-  //   messagingSenderId: "xxxxxxxx",
+  apiKey: "AIzaSyB-ZxCXr-IdQ9rj9YPvwCoWBEN1AaBB08",
+  authDomain: "my-app-project-90868.firebaseapp.com",
+  projectId: "my-app-project-90868",
+  storageBucket: "my-app-project-90868.firebasestorage.app",
+  messagingSenderId: "1003400641418",
+  appId: "1:1003400641418:web:6020dfc26aa2799fb82673",
+  measurementId: "G-678SCLDNKW"
 };
 
+// Initialize Firebase
 const app = initializeApp(firebaseConfig);
-const db = getFirestore(app);
+const analytics = getAnalytics(app);
 
-export default db;
+// Export if needed
+export { app, analytics };
